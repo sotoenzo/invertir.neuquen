@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aprendé a ganar dinero comprando y vendiendo productos. Cursos personalizados por Enzo Soto, emprendedor joven con experiencia.">
+  <title>Compra y Venta Fácil</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #222;
+      color: #FFD700;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* HERO con video de fondo */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+
+    .hero video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    .hero h1 {
+      font-size: 2.8em;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: #FFD700;
+      color: #000;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background: #e6c200;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .cursos, .faq, .testimonios, .contacto, .video {
+      background: #f9f9f9;
+    }
+
+    .curso {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 300px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      background: #fff;
+    }
+
+    .curso:hover {
+      transform: scale(1.05);
+    }
+
+    .video-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .testimonio {
+      max-width: 500px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      border-left: 5px solid #FFD700;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Botón flotante de WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      text-decoration: none;
+      z-index: 1000;
+      transition: transform 0.2s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 600px) {
+      .curso {
+        max-width: 90%;
+      }
+
+      .hero h1 {
+        font-size: 1.8em;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">🛒 Compra y Venta Fácil</div>
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#como">Cómo Funciona</a></li>
+      <li><a href="#testimonios">Testimonios</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="inicio" class="hero">
+ 
+  <div>
+    <h1>Compra y Vende para Ganar Dinero</h1>
+    <p>Aprende a generar ingresos comprando y vendiendo productos de forma simple.</p>
+    <a href="#productos" class="btn">Ver Ejemplos</a>
+  </div>
+</section>
+
+<section>
+  <h1>Sobre mí</h1>
+  <p>¡Hola! Mi nombre es Enzo Soto, y estoy acá para ayudarte. Soy un adolescente de 17 años que te puede ayudar a mejorar con tus compras y ventas. Me dedico a esto hace más de 3 años. Cualquier consulta o duda podes escribirme a pi WhatsApp</p>
+  <a href="https://wa.me/542995189053" class="btn">Mi WhatsApp</a>
+  <a href="https://www.instagram.com/enzo.sottoo/" class="btn">Mi Instagram</a>
+</section>
+
+<section id="productos" class="cursos">
+  <h2>Ejemplos de Productos Rentables</h2>
+  <div class="curso">
+    <h3>📱 Celulares Usados</h3>
+    <p>Compra a bajo precio, revende con ganancia. Ideal para comenzar.</p>
+    <a href="https://wa.me/542995189053" class="btn">Consultar</a>
+  </div>
+  <div class="curso">
+    <h3>👕 Ropa de Marca</h3>
+    <p>Compra lotes por mayor y vende por unidad en redes sociales.</p>
+    <a href="https://wa.me/542995189053" class="btn">Consultar</a>
+  </div>
+  <div class="curso">
+    <h3>🎧 Electrónica</h3>
+    <p>Auriculares, parlantes y más. Fáciles de revender y con buena ganancia.</p>
+    <a href="https://wa.me/542995189053" class="btn">Consultar</a>
+  </div>
+</section>
+
+<section id="como" class="video">
+  <h2>Cómo Funciona</h2>
+  <p>1. Encuentra un producto con demanda.<br>2. Negociá un buen precio.<br>3. Publicá en redes o tu tienda online.<br>4. Cobrá con ganancia.</p>
+</section>
+
+<section id="testimonios" class="testimonios">
+  <h2>Lo que dicen mis clientes</h2>
+  <div class="testimonio">
+    <p>"Gracias a Enzo vendí mi primer celular en 2 días. Muy claro todo y súper útil!"</p>
+    <strong>- Martina, Neuquén</strong>
+  </div>
+  <div class="testimonio">
+    <p>"Conseguí ropa usada barata y la revendí ganando el doble. ¡Excelente guía!"</p>
+    <strong>- Joaquín, Córdoba</strong>
+  </div>
+</section>
+
+<section id="faq" class="faq">
+  <h2>Preguntas Frecuentes</h2>
+  <h4>¿Necesito experiencia previa?</h4>
+  <p>No, te enseño desde cero. Ideal para principiantes.</p>
+  <h4>¿El curso es online?</h4>
+  <p>Sí, todo el contenido es digital y lo podés hacer a tu ritmo.</p>
+</section>
+
+<section id="contacto" class="contacto">
+  <h2>¿Querés empezar?</h2>
+  <p>Dejame tu consulta y te respondo por WhatsApp:</p>
+
+  <form id="formularioContacto">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+    <button type="submit" class="btn">Enviar por WhatsApp</button>
+  </form>
+
+  <script>
+    document.getElementById("formularioContacto").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const nombre = document.getElementById("nombre").value.trim();
+      const mensaje = document.getElementById("mensaje").value.trim();
+
+      if (!nombre || !mensaje) {
+        alert("Por favor completá todos los campos.");
+        return;
+      }
+
+      const confirmar = confirm("¿Estás seguro de enviar este formulario?");
+      if (!confirmar) return;
+
+      const texto = `Hola Enzo! Mi nombre es ${nombre}. Tengo una consulta: ${mensaje}`;
+      const numero = "542995189053";
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+
+      window.location.href = url;
+    });
+  </script>
+</section>
+
+<footer>
+  <p>&copy; 2025 Compra y Venta Fácil. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>
